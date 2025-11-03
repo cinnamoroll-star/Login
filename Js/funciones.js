@@ -28,6 +28,7 @@ function ingresar(){
     contenedor.parentNode.appendChild(btnAgregar);
   }
   mostrarBotonAgregar();
+  calcularTotales();
 }
 
 
@@ -61,6 +62,7 @@ function agregarConcepto(contenedor) {
   btnEliminar.addEventListener('click', () => {
     div.remove();
     mostrarBotonAgregar();
+    calcularTotales();
   });
 
   const cantidadInput = div.querySelector('.cantidad');
@@ -69,10 +71,12 @@ function agregarConcepto(contenedor) {
 
   cantidadInput.addEventListener('input', () => {
     importeInput.value = cantidadInput.value * valorInput.value;
+    calcularTotales();
   });
 
   valorInput.addEventListener('input', () => {
     importeInput.value = cantidadInput.value * valorInput.value;
+    calcularTotales();
   });
 }
 
@@ -87,3 +91,40 @@ function mostrarBotonAgregar() {
     btnAgregar.style.display = 'block';
   }
 }
+
+// Función para calcular subtotal, IVA y total
+function calcularTotales() {
+  const conceptos = document.querySelectorAll('.concepto');
+  let subtotal = 0;
+
+  conceptos.forEach(concepto => {
+    const cantidadInput = concepto.querySelector('.cantidad');
+    const valorInput = concepto.querySelector('.valorUnitario');
+    const cantidad = parseFloat(cantidadInput.value) || 0;
+    const valor = parseFloat(valorInput.value) || 0;
+
+    const importe = cantidad * valor;
+    concepto.querySelector('.importe').value = importe.toFixed(2);
+
+    subtotal += importe;
+  });
+
+  const iva = subtotal * 0.16;
+  const total = subtotal + iva;
+
+  document.getElementById('subtotalDisplay').value = subtotal.toFixed(2);
+  document.getElementById('ivaDisplay').value = iva.toFixed(2);
+  document.getElementById('totalDisplay').value = total.toFixed(2);
+}
+
+// Agregar eventos para recalcular totales
+function agregarEventosTotales() {
+  const conceptos = document.querySelectorAll('.concepto');
+  conceptos.forEach(concepto => {
+    const cantidadInput = concepto.querySelector('.cantidad');
+    const valorInput = concepto.querySelector('.valorUnitario');
+    cantidadInput.addEventListener('input', calcularTotales);
+    valorInput.addEventListener('input', calcularTotales);
+  });
+}
+document.addEventListener('DOMContentLoaded', calcularTotales);
