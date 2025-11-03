@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+<body class="bg-info vh-100">
+
+<div class="d-flex align-items-center justify-content-center" style="margin-top: 50px;">
+  <div class="card shadow p-4 d-flex" style="width:50rem;">
+    <h3 class="text-center mb-3">Inicio de Sesión</h3>
+    <form action="" id="loginForm">
+
+    <div class="container text-center">
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1 g-lg-3">
+        <div class="col">
+        <input type="text" id="usuario" class="form-label" placeholder="Usuario" required> </div>
+
+        <div class="col">
+        <input type="password" id="clave" class="form-label" placeholder="Contraseña" required> </div>
+
+        <div class="col">
+        <input type="number" id="ref" class="form-label" placeholder="Campos" required></div>
+  </div>
+
+      <button type="button" class="btn btn-primary w-50 mt-3" onclick="ingresar()">Ingresar</button>
+
+      
+    </div>
+  </div>
+    </div>
+    </form>
+  </div>
+
+  <br>
+<div class="d-flex align-items-center justify-content-center">
+    <div class="card shadow p-4" style="width:50rem;">
+    <h3 class="text-center mb-3">Conceptos:</h3>
+      <div id="contenedorConceptos"></div>
+    </div>
+  </div>
+
+  <br>
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="card shadow p-4" style="width:50rem;">
+    <h3 class="text-center mb-3">Boleto:</h3>
+      <p id="mensaje" class="text-center mt-3 text-danger"></p>
+    </div>
+  </div>
+
+  <script src="Js/funciones.js"></script>
+</body>
+</html>

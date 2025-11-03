@@ -1,0 +1,61 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+#cabeza{
+	width: 100%;
+	align-content: center;
+}
+#ovni{
+	margin-top: 5%;
+	width: 100%;
+	align-content: center;
+	text-align: center;
+}
+
+
+/*Para Telefonos*/
+@media screen and (min-width: 400px){
+	body{
+		background-color: lightpink;
+	}
+	#cabeza{
+		background-color: lightblue;
+		height: 80px;
+	}
+	#ovni{
+		background-color: limegreen;
+		height: 300px;
+	}
+}
+
+/*Para Tabletas*/
+@media only screen and (min-width:760px) and (max-width:991px){
+	body{
+		background-color: lightcyan;
+	}
+	#cabeza{
+		background-color: blue;
+		height: 90px;
+	}
+	#ovni{
+		background-color: lightpink;
+		height: 300px;
+	}
+}
+
+/*Para Equipos de Escritorio*/
+@media only screen and (min-width:992px){
+	body{
+		background-color: lightyellow;
+	}
+	#cabeza{
+		background-color: pink;
+		height: 100px;
+	}
+	#ovni{
+		background-color: lightblue;
+		height: 300px;
+	}
+}
