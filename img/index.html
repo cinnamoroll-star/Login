@@ -8,28 +8,28 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
 </head>
-<body class="bg-danger-subtle vh-100">
+<body class="bg-info vh-100">
 
 <!--NavBar-->
-<nav class="navbar navbar-expand-lg bg-primary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">Sweets JK</a>
+    <a class="navbar-brand" href="#">Cinnamon JK</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="#home">Home</a>
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#iniciarSesion">Iniciar Sesión</a>
+          <a class="nav-link" href="#iniciarSesion">Iniciar Sesión</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#concept">Conceptos</a>
+          <a class="nav-link" href="#concept">Conceptos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#bolet">Boleto</a>
+          <a class="nav-link" href="#bolet">Boleto</a>
         </li>
       </ul>
     </div>
@@ -42,22 +42,22 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1 g-lg-3">
     <div class="col">
       <div class="card">
-        <img src="img/cinnamonroll.jpg" style="height: 170px; background-size: cover;" class="card-img-top" alt="...">
+        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Rollos de Canela</h5>
-          <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Similique cum velit fuga tenetur aspernatur dignissimos.</p>
-          <a href="#" class="btn btn-primary">Detalles</a>
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>
     
     <div class="col">
       <div class="card">
-        <img src="img/food.jpg" class="card-img-top" alt="...">
+        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Pastelitos</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Voluptate tempore, cumque debitis esse. Eos, iusto.</p>
-          <a href="#" class="btn btn-primary">Detalles</a>
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>
@@ -65,21 +65,21 @@
 
     <div class="col">
       <div class="card">
-        <img src="img/waffle.jpg" class="card-img-top" alt="...">
+        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Waffles</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum esse quia similique fuga, voluptate?</p>
-          <a href="#" class="btn btn-primary">Detalles</a>
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>
 
   </div>
 </div>
-<br>
+
 
 <!--Login-->
-<div id="iniciarSesion" class="d-flex align-items-center justify-content-center" style="width:65%; margin:auto;">
+<div id="iniciarSesion" class="d-flex align-items-center justify-content-center" style="margin-top: 50px;">
   <div class="card shadow p-4 d-flex" style="width:50rem;">
     <h3 class="text-center mb-3">Inicio de Sesión</h3>
     <form action="" id="loginForm">
@@ -99,7 +99,6 @@
 
       <button type="button" class="btn btn-primary w-50 mt-3" onclick="ingresar()">Ingresar</button>      
     </div>
-
   </div>
     </div>
     </form>
@@ -108,7 +107,7 @@
 
 
 <!--Conceptos-->
-<div id="concept" class="d-flex align-items-center justify-content-center" style="width:65%; margin:auto;">
+<div id="concept" class="d-flex align-items-center justify-content-center">
     <div class="card shadow p-4" style="width:50rem;">
     <h3 class="text-center mb-3">Conceptos:</h3>
       <div id="contenedorConceptos"></div>
@@ -118,23 +117,23 @@
 
 
 <!--Boleto-->
-  <div id="bolet" class="d-flex align-items-center justify-content-center" style="width:65%; margin:auto;">
+  <div id="bolet" class="d-flex align-items-center justify-content-center">
     <div class="card shadow p-4" style="width:50rem; margin-bottom: 50px;">
     <h3 class="text-center">Boleto:</h3>
       <p id="mensaje" class="text-center mt-3"></p>
       <br>
       
-        <div class="row mb-1" style="margin: auto;">
+        <div class="row mb-1">
           <div class="col-6 text-end"><p>Subtotal:</p></div>
-              <div class="col-6"><input type="text" class="form-control text-end" id="subtotalDisplay" value="0.00" readonly style="width:130px;"></div>
+              <div class="col-6"><input type="text" class="form-control text-end" id="subtotalDisplay" value="0.00" readonly style="width:150px;"></div>
               </div>
                 <div class="row mb-1">
                   <div class="col-6 text-end"><p>IVA:</p></div>
-                    <div class="col-6"><input type="text" class="form-control text-end" id="ivaDisplay" value="0.00" readonly style="width:130px;"></div>
+                    <div class="col-6"><input type="text" class="form-control text-end" id="ivaDisplay" value="0.00" readonly style="width:150px;"></div>
                     </div>
                     <div class="row">
                       <div class="col-6 text-end"><p>Total:</p></div>
-                        <div class="col-6"><input type="text" class="form-control text-end" id="totalDisplay" value="0.00" readonly style="width:130px;"></div>
+                        <div class="col-6"><input type="text" class="form-control text-end" id="totalDisplay" value="0.00" readonly style="width:150px;"></div>
               </div>
           </div>
     </div>
